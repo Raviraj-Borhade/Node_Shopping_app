@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pagetitle}
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/product.css")
+    body 
+
+        header.main-header
+            nav.main-header-nav
+                ul.main-header-item-list
+                    li.main-header-item 
+                        a(href="/") shop
+                    li.main-header-item
+                        a.active(href="/admin/addprod") Add product
+
+
+
+        main
+            form.product-form(action="/admin/addprod", method="post")
+                .form-control
+                    label(for="title") Title
+                    input(type="text" ,name ="title" )#title
+
+        
+                button.submit add product     
